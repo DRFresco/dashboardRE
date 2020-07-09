@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script type="text/javascript" src="js/jquery.js" />
+  <script type="text/javascript" src="js/bootstrap.js" />
+  <link href="css/addons/datatables.min.css" rel="stylesheet">
+  <!-- MDBootstrap Datatables  -->
+<script type="text/javascript" src="js/addons/datatables.min.js"></script>
+
+  <title>REAL energy</title>
+</head>
+<style type="text/css">
+  table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: .5em;
+}
+body{
+  background: url("img/pattern.jpg");
+/*  background-size: cover;
+*/
+}
+.head{
+  text-align: center;
+  font-family: monospace;
+  background-color: rgba(0, 55, 255, 0.7);
+    color: white;
+}
+.products{
+  background-color: whitesmoke;
+}
+.searcharea{
+  color: white;
+    background-color: seagreen;
+}
+.logo{
+  width:350px;
+}
+.prInput{
+  width:100px;
+}
+.carrito{
+  font-size: 15pt;
+    width: 100%;
+
+    text-align: center;
+    background-color: slategrey;
+    color: white;
+    border-radius: 25px;
+  border: 2px solid dimgrey;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 3px 3px #5049a9;
+  
+}
+.carrito:hover{
+  background-color: white;
+}
+.carrito2{
+  font-size: 15pt;
+    width: 100%;
+    text-align: center;
+    background-color: #fafafa;
+    color: black;
+    border-radius: 25px;
+  border: 2px solid dimgrey;
+  padding: 20px;
+  /*box-shadow: 3px 3px #5049a9;*/
+  
+}
+.rabi{
+  border-radius: 15px;
+  border: 2px solid dimgrey;
+  padding: 20px;
+  box-shadow: 3px 3px #5049a9;
+}
+.ordenar{
+  font-size: 15pt;
+    width: 100%;
+    padding-left: 10%;
+    text-align: center;
+        background-color: #49a954;
+    color: white;
+    border-radius: 25px;
+  border: 2px solid dimgrey;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 3px 3px #5049a9;
+  
+}
+.ordenar:hover{
+  background-color: white;
+  color:black;
+}
+.checkout{
+
+  font-size: 15pt;
+    width: 100%;
+    padding-left: 10%;
+    text-align: center;
+        background-color: slategrey;
+    color: white;
+    border-radius: 25px;
+  border: 2px solid dimgrey;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 3px 3px #5049a9;
+  
+}
+.checkout:hover{
+  background-color: white;
+  color:black;
+}
+.regresar{
+  font-size: 15pt;
+    width: 100%;
+    padding-left: 10%;
+    text-align: center;
+        background-color: slategrey;
+    color: white;
+    border-radius: 25px;
+  border: 2px solid dimgrey;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 3px 3px #5049a9;
+  
+}
+.regresar:hover{
+  background-color: white;
+  color:black;
+}
+.total_title{
+  font-size: 26pt;
+    width: 80%;
+    padding-left: 10%;
+    text-align: center;
+    background-color: #49a954;
+    color: white;
+}
+.total{
+  font-size: 26pt;
+    width: 100%;
+    text-align: center;
+    background-color: #fafafa;
+    color: #49a954;
+}
+.compras{
+  background-color: lightgrey;
+
+}
+.hide{
+
+}
+.totalind{
+  font-family: monospace;
+  color: black;
+  font-size: 16pt;
+}
+.button-p {
+    margin: 0 0 0 5px;
+    text-indent: -9999px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    float: left;
+    text-align: center;
+    background: url(img/plus.png) no-repeat;
+    background-size: cover;
+}
+.button-m {
+    margin: 0 0 0 5px;
+    text-indent: -9999px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    float: left;
+    text-align: center;
+    background: url(img/minus.png) no-repeat;
+    background-size: cover;
+}
+.inputsmall{
+  float: left;
+    width: 60px;
+    font: 700 20px Helvetica,sans-serif;
+    padding: 3px 0 0;
+}
+.mapa{
+   border-radius: 25px;
+  border: 2px solid dimgrey;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 3px 3px #5049a9;
+  background-color: white;
+  color:black;
+}
+.splash{
+  display: none;
+  background-color: white;
+  width:100%;
+  padding:20px;
+  /*height:400px;*/
+}
+table td{
+  background-color:  rgba(0, 0, 0, 0.7);
+  color:white;
+}
+</style>
+<body>
+<div class="container head" >
+  <div class="row">
+    <div class="col-sm-6" >
+      <h1 ></h1>
+      <br>
+      <h5 style="color:white;"> ADMINISTRADOR DE CLIENTES</h5>
+      <h5 style="color:blue;"> </h5>
+      <br>
+      Buscar por palabra:<br>
+    <input type="text" id="myinput" style="width:100%;" class="rabi"/><br>
+      <!-- <input type="button" value="¿Cómo funciona?" name=""/> -->
+    </div>
+    <div class="col-sm-6">
+      <img src="img/reallogo.jpeg" class="logo">
+      <hr>
+
+    </div>
+  </div>
+
+
+  <hr/>
+</div>
+
+
+<div class="container" id="table_cont" >
+  
+  <div class="row">
+<table class="table products" cellspacing="0" width="100%" id="tablaClientes">
+  <tbody><tr>
+    <th onclick="sortTable(0)" style="cursor:pointer" id="">cliente</th>
+    <th onclick="sortTable(1)" style="cursor:pointer" id="">Destino</th>
+    <th onclick="sortTable(2)" style="cursor:pointer" id="">Fecha de descarga</th>
+    <th onclick="sortTable(3)" style="cursor:pointer" id="">Fecha de pago</th>
+    <th onclick="sortTable(4)" style="cursor:pointer" id="">Estacion de entrga</th>
+    <th onclick="sortTable(5)" style="cursor:pointer" id="">CAPACIDAD (LTS A FACTURAR)</th>
+    <th onclick="sortTable(6)" style="cursor:pointer" id="">Cantidad total (LTS)</th>
+  </tr>
+  <!-- <tr>
+    <td>Island Trading</td>
+    <td>UK</td>
+  </tr><tr>
+    <td>North/South</td>
+    <td>UK</td>
+  </tr><tr>
+    <td>Berglunds snabbkop</td>
+    <td>Sweden</td>
+  </tr><tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Italy</td>
+  </tr><tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+  </tr><tr>
+    <td>Koniglich Essen</td>
+    <td>Germany</td>
+  </tr><tr>
+    <td>Paris specialites</td>
+    <td>France</td>
+  </tr><tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Canada</td>
+  </tr> -->
+  
+  
+  
+  
+  
+  
+  
+</tbody></table>
+</div></div> <!-- ROw y CONTAINER -->
+
+</body>
+
+<script type="text/javascript">
+_PAYMENTS={};
+_productos={};
+carselected=false;
+$(document).ready(function(){
+  
+  getMenu();
+
+  $("#myinput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#tablaClientes tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+
+});
+
+function getMenu(){
+
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      _PAYMENTS=myObj;
+      console.log(_PAYMENTS)
+      despliegaMenu();
+      
+      }
+  };
+  xmlhttp.open("GET", "/workingcopy", true);
+  xmlhttp.send();
+}
+
+function despliegaMenu(){
+
+  clientes=[];
+
+  for(entry in _PAYMENTS){
+    cliente=entry;
+    data=_PAYMENTS[entry];
+    for(i=0;i<data.length;i++){
+      if(data[i].length>=4 ){
+        trstr='<tr class="prow unselected" >\
+          <td>'+cliente+'</td>\
+          <td style="background-color:#ffffff;color:black;">'+data[i][0]+'</td>\
+          <td>'+data[i][1]+'</td>\
+          <td>'+data[i][2]+'</td>\
+          <td>'+data[i][3]+'</td>\
+          <td>'+data[i][4]+'</td>\
+          <td>'+data[i][5]+'</td>\
+        </tr>'
+        $("#tablaClientes").append(trstr)
+      }
+    }
+
+
+  }
+  //initB();
+      
+}
+
+function isFloat(n){
+    return Number(n) === n && n % 1 !== 0;
+}
+
+function togglecar(){
+  if(carselected){
+    $(".carrito").css("background-color","grey")
+    $(".unselected").toggle();
+    carselected=false;
+  }
+  else{
+    $(".carrito").css("background-color","cornflowerblue")
+    $(".unselected").toggle();
+    carselected=true;
+  }
+}
+
+
+
+</script>
+
+
+
+
+<!-- <script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("tablaClientes");
+  switching = true;
+  // Set the sorting direction to ascending:
+  dir = "asc";
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // Start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /* Loop through all table rows (except the
+    first, which contains table headers): */
+    for (i = 1; i < (rows.length - 1); i++) {
+      // Start by saying there should be no switching:
+      shouldSwitch = false;
+      /* Get the two elements you want to compare,
+      one from current row and one from the next: */
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /* Check if the two rows should switch place,
+      based on the direction, asc or desc: */
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark that a switch has been done: */
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      // Each time a switch is done, increase this count by 1:
+      switchcount ++;
+    } else {
+      /* If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again. */
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script> -->
+
+
+</html>

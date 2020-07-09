@@ -1,0 +1,71 @@
+{
+	"children": [{
+		"name": "G500",
+		"children": [{
+			"name": "ecatepec",
+			"group": "ecatepec",
+			"value": 12041873,
+			"colname": "level3"
+		}, {
+			"name": "pachuca",
+			"group": "pachuca",
+			"value": 664088,
+			"colname": "level3"
+		}, {
+			"name": "toluca",
+			"group": "toluca",
+			"value": 1602884,
+			"colname": "level3"
+		}, {
+			"name": "queretaro",
+			"group": "queretaro",
+			"value": 680746,
+			"colname": "level3"
+		}, {
+			"name": "zinacatepec",
+			"group": "zinacatepec",
+			"value": 188500,
+			"colname": "level3"
+		}, {
+			"name": "NULL",
+			"group": "NULL",
+			"value": 1942318,
+			"colname": "level3"
+		}]
+	}, {
+		"name": "RECAR ",
+		"children": [{
+			"name": "zapopan",
+			"group": "zapopan",
+			"value": 525013,
+			"colname": "level3"
+		}, {
+			"name": "NULL",
+			"group": "NULL",
+			"value": 175006,
+			"colname": "level3"
+		}, {
+			"name": "veracruz",
+			"group": "veracruz",
+			"value": 2847120,
+			"colname": "level3"
+		}]
+	}, {
+		"name": "PETRODIESEL",
+		"children": [{
+			"name": "leon",
+			"group": "leon",
+			"value": 393393,
+			"colname": "level3"
+		}]
+	}, {
+		"name": "ALPEZ",
+		"children": [{
+			"name": "tlaquepaque",
+			"group": "tlaquepaque",
+			"value": 333995,
+			"colname": "level3"
+		}]
+	}],
+	"name": "bigboss"
+}

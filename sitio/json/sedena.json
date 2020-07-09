@@ -1,0 +1,102 @@
+{
+	"children": [ {
+		"name": "SEDENA",
+		"children": [{
+			"name": "frente 7",
+			"group": "frente 7",
+			"value": 77901.09999999999,
+			"colname": "level3"
+		}, {
+			"name": "frente 6",
+			"group": "frente 6",
+			"value": 94520.5,
+			"colname": "level3"
+		}, {
+			"name": "frente 11",
+			"group": "frente 11",
+			"value": 125747.00000000001,
+			"colname": "level3"
+		}, {
+			"name": "frente 15",
+			"group": "frente 15",
+			"value": 65120.700000000004,
+			"colname": "level3"
+		}, {
+			"name": "frente 13",
+			"group": "frente 13",
+			"value": 67961.65999999999,
+			"colname": "level3"
+		}, {
+			"name": "frente 12",
+			"group": "frente 12",
+			"value": 101035.22,
+			"colname": "level3"
+		}, {
+			"name": "frente 18",
+			"group": "frente 18",
+			"value": 142634.49,
+			"colname": "level3"
+		}, {
+			"name": "frente 20",
+			"group": "frente 20",
+			"value": 176298.49,
+			"colname": "level3"
+		}, {
+			"name": "frente 10",
+			"group": "frente 10",
+			"value": 37402.299999999996,
+			"colname": "level3"
+		}, {
+			"name": "frente 19",
+			"group": "frente 19",
+			"value": 209512.19999999998,
+			"colname": "level3"
+		}, {
+			"name": "frente 14",
+			"group": "frente 14",
+			"value": 17750.699999999997,
+			"colname": "level3"
+		}, {
+			"name": "frente 17",
+			"group": "frente 17",
+			"value": 103171.03000000001,
+			"colname": "level3"
+		}, {
+			"name": "frente 1",
+			"group": "frente 1",
+			"value": 238168.56,
+			"colname": "level3"
+		}, {
+			"name": "frente 16",
+			"group": "frente 16",
+			"value": 117914.69999999998,
+			"colname": "level3"
+		}, {
+			"name": "frente 9",
+			"group": "frente 9",
+			"value": 34243.5,
+			"colname": "level3"
+		}, {
+			"name": "frente18",
+			"group": "frente18",
+			"value": 2405,
+			"colname": "level3"
+		}, {
+			"name": "frente 5",
+			"group": "frente 5",
+			"value": 19323.2,
+			"colname": "level3"
+		}, {
+			"name": "frente  1",
+			"group": "frente  1",
+			"value": 500.8,
+			"colname": "level3"
+		}, {
+			"name": "frente 2",
+			"group": "frente 2",
+			"value": 12786.3,
+			"colname": "level3"
+		}]
+	}],
+	"name": "bigboss"
+}
