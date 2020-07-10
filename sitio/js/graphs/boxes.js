@@ -1,4 +1,6 @@
-
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 var boxDim=845;
 // set the dimensions and margins of the graph
 var margin = {top: 10, right: 10, bottom: 10, left: 10},
@@ -65,9 +67,9 @@ d3.json(json, function(data) {
     .append("text")
       .attr("x", function(d){ return d.x0+5})    // +10 to adjust position (more right)
       .attr("y", function(d){ return d.y0+20})    // +20 to adjust position (lower)
-      .text(function(d){ return d.data.name.replace('mister_','') })
-      .attr("font-size", "10px")
-      .attr("fill", "white")
+      .text(function(d){ return d.data.name.toUpperCase() })
+      .attr("font-size", "14px")
+      .attr("fill", "black")
 
   // and to add the text labels
   svg
@@ -77,9 +79,10 @@ d3.json(json, function(data) {
     .append("text")
       .attr("x", function(d){ return d.x0+5})    // +10 to adjust position (more right)
       .attr("y", function(d){ return d.y0+35})    // +20 to adjust position (lower)
-      .text(function(d){ return Math.round(d.data.value) })
-      .attr("font-size", "11px")
+      .text(function(d){ return "$ "+numberWithCommas(Math.round(d.data.value) )+" MXN" })
+      .attr("font-size", "13px")
       .attr("fill", "white")
+      .attr("background-color", "grey")
 
   // Add title for the 3 groups
   svg
