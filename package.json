@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "exceljs": "^4.0.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "node-xlsx": "^0.15.0"
   }
 }
